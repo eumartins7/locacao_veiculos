@@ -20,10 +20,11 @@ body {
     justify-content: space-between;
     background-image: linear-gradient(to right, #d39001, white);
     background-size: cover;
-    height: 200px;
+    height: 150px;
     width: 100%;
     border-radius: 0;
     padding: 20px;
+    
 }
 
 .esquerda {
@@ -47,8 +48,9 @@ body {
 }
 
 .logo-header-img {
-    width: 150px;
-    height: 150px;
+    margin-left: -70px;
+    width: 75px;
+    height: 75px;
     margin-top: -10px;
 }
 
@@ -68,7 +70,7 @@ body {
 }
 
 .frase {
-    margin-top: 50px;
+    margin-top: 10px;
     font-size: 20px;
     color: #444;
 }
@@ -431,7 +433,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
   }
 
   .cards-carros img {
-
+    /*arrumar img pra celular*/
   }
 
   .forms {
