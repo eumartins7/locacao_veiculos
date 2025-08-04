@@ -222,8 +222,15 @@ body {
 
 .button-cars {
     border-radius: 20px;
+    font-size: 1.1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    color: #000;
     border: none;
-    width: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     height: 40px;
     background-color: orange;
     cursor: pointer;
