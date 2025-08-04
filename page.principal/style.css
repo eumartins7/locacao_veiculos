@@ -29,7 +29,6 @@ body {
 
 .esquerda {
     display: flex;
-    
     gap: 15px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
