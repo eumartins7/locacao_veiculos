@@ -19,21 +19,20 @@ body {
     display: flex;
     justify-content: space-between;
     background-image: linear-gradient(to right, #d39001, white);
-    background-size: cover;
-    height: 150px;
     width: 100%;
-    border-radius: 0;
-    padding: 20px;
-    
+    margin: 0;
+    padding: 1rem;
+    z-index: 999;
 }
 
 .esquerda {
     display: flex;
+    padding: 1rem;
     gap: 15px;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 20px;
+    font-size: 1.2rem;
 }
 
 .brand-slogan {
@@ -383,6 +382,10 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
     align-items: center;
 }
 
+.rodape-topo h1 {
+    font-size: 1.1rem;
+}
+
 .horizontal-line {
     border: none;
     height: 1px;
@@ -404,6 +407,7 @@ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, O
 
 .redes-center a {
     text-decoration: none;
+    color: #000;
 }
 
 .redes img {

@@ -21,6 +21,8 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
+    <script src="/JavaScript/carousel.js" defer></script>
+
 </head>
 <body>
     <header class="main-header" id="inicio">
@@ -44,15 +46,16 @@
             </nav>
     </header>
 
-    <div class="carousel">
-        <img src="../imagens/imagens-carrossel/carbranco.jpg" class="slide active">
-        <img src="../imagens/imagens-carrossel/carro-estrada2.png" class="slide">
-        <img src="../imagens/imagens-carrossel/carbranco.jpg" class="slide">
-        <img src="../imagens/imagens-carrossel/carro-estrada2.png" class="slide">
-
-        <button class="prev">&#10094;</button>
-        <button class="next">&#10095;</button>
-    </div>
+    <section class="carousel-section">
+        <div class="carousel">
+            <img src="../imagens/imagens-carrossel/carbranco.jpg" class="slide active">
+            <img src="../imagens/imagens-carrossel/carro-estrada2.png" class="slide">
+            <img src="../imagens/imagens-carrossel/carbranco.jpg" class="slide">
+            <img src="../imagens/imagens-carrossel/carro-estrada2.png" class="slide">
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
 
     <section class="sobre-nos" id="sobre-nos">
         <h1 class="title">Por que escolher <br>nossos serviços?</h1>
@@ -87,13 +90,13 @@
 
             <div class="card-veicle"> <!-- 1º card -->
                 <img src="../imagens/cars/uno.jpg" alt="">
-                <h2>Fiat Uno 1.0</h2>
+                <div class="car-uno" id="car-uno">
+                    <h2>Fiat Uno 1.0</h2>
                     
                     <div class="box-inside">
                         <p>🗸 Econômico, ideal para cidade</p>
                         <p>🗸 Ar-condicionado e direção hidráulica</p>
                     </div>
-
                     <div class="infos-car">
                         <p>A partir de</p>
                         <p class="valor">R$ 2.000,00/mês*</p>
@@ -101,17 +104,18 @@
                         <p>Franquia de 2.000 km</p>
                         <a href="../page.aluguel/index.html" target="_blank" class="button-cars">Alugar</a>
                     </div>
+                </div>
             </div>
 
             <div class="card-veicle"> <!-- 2º card -->
                 <img src="../imagens/cars/gol.png" alt="">
-                <h2>Volkswagen Gol 1.6</h2>
+                <div class="car-gol" id="car-gol">
+                    <h2>Volkswagen Gol 1.6</h2>
                     
                     <div class="box-inside">
-                            <p>🗸 Ótimo desempenho urbano e rodoviário</p>
-                            <p>🗸 Porta-malas espaçoso</p>
+                        <p>🗸 Ótimo desempenho urbano e rodoviário</p>
+                        <p>🗸 Porta-malas espaçoso</p>
                     </div>
-
                     <div class="infos-car">
                         <p>A partir de</p>
                         <p class="valor">R$ 2.000,00/mês*</p>
@@ -119,16 +123,17 @@
                         <p>Franquia de 2.000 km</p>
                         <a href="../page.aluguel/index.html" target="_blank" class="button-cars">Alugar</a>
                     </div>
+                </div>
             </div>
 
             <div class="card-veicle"> <!-- 3º card -->
                 <img src="../imagens/cars/onix.png" alt="">
-                <h2>Chevrolet Onix</h2>
+                <div class="car-onix">
+                    <h2>Chevrolet Onix</h2>
                     <div class="box-inside">
                         <p>🗸 Modelo 2022, completo</p>
                         <p>🗸 Multimídia e câmbio automático</p>
-                    </div> 
-
+                    </div>
                     <div class="infos-car">
                         <p>A partir de</p>
                         <p class="valor">R$ 2.000,00/mês*</p>
@@ -136,16 +141,17 @@
                         <p>Franquia de 2.000 km</p>
                         <a href="../page.aluguel/index.html" target="_blank" class="button-cars">Alugar</a>
                     </div>
+                </div>
             </div>
 
             <div class="card-veicle"> <!-- 4º card -->
                 <img src="../imagens/cars/hb20.webp" alt="">
-                <h2>Hyundai HB20</h2>
+                <div class="car-hb20" id="car-hb20">
+                    <h2>Hyundai HB20</h2>
                     <div class="box-inside">
                         <p>🗸 Design moderno e econômico</p>
                         <p>🗸 Baixo consumo de combustível</p>
                     </div>
-
                     <div class="infos-car">
                         <p>A partir de</p>
                         <p class="valor">R$ 2.000,00/mês*</p>
@@ -153,22 +159,24 @@
                         <p>Franquia de 2.000 km</p>
                         <a href="../page.aluguel/index.html" target="_blank" class="button-cars">Alugar</a>
                     </div>
+                </div>
             </div>
 
             <div class="card-veicle"> <!-- 5º card -->
                 <img src="../imagens/cars/kwid.png" alt="">
-                <h2>Renault Kwid</h2>
-                <div class="box-inside">
-                    <p>🗸 Flex</p>
-                    <p>🗸 Seguro e econômico</p>
-                </div>
-
-                <div class="infos-car">
-                    <p>A partir de</p>
-                    <p class="valor">R$ 2.000,00/mês*</p>
-                    <p>Plano de 12 meses</p>
-                    <p>Franquia de 2.000 km</p>
-                    <a href="../page.aluguel/index.html" target="_blank" class="button-cars">Alugar</a>
+                <div class="car-kwid" id="car-kwid">
+                    <h2>Renault Kwid</h2>
+                    <div class="box-inside">
+                        <p>🗸 Flex</p>
+                        <p>🗸 Seguro e econômico</p>
+                    </div>
+                    <div class="infos-car">
+                        <p>A partir de</p>
+                        <p class="valor">R$ 2.000,00/mês*</p>
+                        <p>Plano de 12 meses</p>
+                        <p>Franquia de 2.000 km</p>
+                        <a href="../page.aluguel/index.html" target="_blank" class="button-cars">Alugar</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -199,7 +207,6 @@
                     <li><a href="#inicio">Início</a></li>
                     <li><a href="#sobre-nos">Sobre Nós</a></li>
                     <li><a href="#veiculos">Veículos</a></li>
-                    <li><a href="#contato">Contato</a></li>
                     </ul>
                 </nav>
             </div>
@@ -222,7 +229,5 @@
             <img src="../imagens/icons/message.png" alt="">
             Converse com um vendedor</a>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
