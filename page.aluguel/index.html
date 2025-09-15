@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes Carros</title>
     <link rel="stylesheet" href="detalhe.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="main-header" id="inicio">
@@ -20,7 +26,7 @@
             </div>
     </header>
 
-    <section class="box-father">
+    <section class="carro">
         <div class="container-left">
             <div class="img-car">
                 <img src="../imagens/cars/gol.png" alt="imagem-carro-gol">
@@ -29,13 +35,15 @@
 
         <div class="container-right">
             <div class="car-name">
-               <div class="inside-infos">
+               <div class="infos-car">
                    <h1>Volkswagen Gol</h1>
                    <p>1.6 MSI Flex, 4 cilindros</p>
-                <hr>
-                <p>A partir de</p>
-                <h2>R$2.000,00/mês</h2>
-                <h1>AQUI SERA UM BOTAO QUE CRIARA UM 'MODAL' PARA FORMULARIO SIMPLES!</h1>
+                    <hr>
+                    <p>A partir de</p>
+                    <h2>R$2.000,00/mês</h2>
+                    <div class="to-talk">
+                    <a href="https://wa.me/5512988372717" target="_blank">Eu quero</a>
+                </div>
                </div>
             </div>
 
@@ -54,36 +62,63 @@
         </div>
     </section>
 
-    <section class="box-father">
-        <div class="container-right">
-            <div class="car-info">
+    <section class="especificacao">
+        <div class="container-especificacao">
+            <div class="info">
                <div class="inside-infos">
-                   <img src="../imagens/infos-car/speedometer.png" alt="velocimetro"> <h2 class="feature">Zero KM</h2>
-                   <h1>AJEITAR ESSA SITUACAO AQUI!</h1>
+                   <img src="../imagens/infos-car/speedometer.png" alt="velocimetro"> 
+                   <h2 class="feature">
+                    Zero KM
+                </h2>
                </div>
             </div>
         
-            <div class="car-info">
+            <div class="info">
                 <div class="inside-infos">
                     <img src="../imagens/infos-car/gas-station.png" alt="bomba-combustivel">
-                    <h2 class="feature">Flex</h2>
+                    <h2 class="feature">
+                        Flex
+                    </h2>
                 </div>
             </div>
 
-            <div class="car-info">
+            <div class="info">
                 <div class="inside-infos">
                     <img src="../imagens/infos-car/gearshift.png" alt="bomba-combustivel">
-                    <h2 class="feature">Manual</h2>
+                    <h2 class="feature">
+                        Manual
+                    </h2>
                 </div>
             </div>
 
-            <div class="car-info">
+            <div class="info">
                 <div class="inside-infos">
                     <img src="../imagens/infos-car/door.png" alt="bomba-combustivel">
-                    <h2 class="feature">4 Portas</h2>
+                    <h2 class="feature">
+                        4 Portas
+                    </h2>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer class="rodape">
+            <div class="rodape-topo">
+                <h1 class="info-rodape">
+                    © 2025 Martins Locações
+                </h1>
+            </div>
+            <hr class="horizontal-line">
+            <div class="redes">
+                <ul class="redes-center">
+                    <a href="https://web.facebook.com/profile.php?id=100075510076440&locale=pt_BR" target="_blank">
+                        <li><img src="../imagens/icons/Facebook.png"> Facebook</li>
+                    </a>
+                    <a href="https://www.instagram.com/chac_doisirmaos/" target="_blank">
+                        <li><img src="../imagens/icons/insta.png" alt="instagram-logo"> Instagram</li>
+                    </a>
+                </ul>
+            </div>
+    </footer>
 </body>
 </html>
