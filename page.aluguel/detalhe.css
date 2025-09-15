@@ -19,14 +19,12 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 0;
-    padding: 5px;
+    padding: 1rem;
 }
 
 .logo-header-img {
-    margin-left: -10px;
-    width: 75px;
-    height: 75px;
-    margin-top: 0px;
+    width: 20%;
+    height: 10vh;
 }
 
 .esquerda {
@@ -49,38 +47,60 @@ body {
     color: black;
 }
 
-.box-father {
+.carro {
     display: flex;
     flex-wrap: nowrap;
-    margin: 30px;
+    margin: 2rem;
     gap: 30px;
 }
 
 .container-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
-    width: 1000px;
+    width: 50%;
     border-radius: 20px;
-    padding: 10px;
-}
-
-.img-car {
-    text-align: center;
+    padding: 1rem;
 }
 
 .container-left img {
-    width: 600px;
+    width: 80%;
 }
 
 .container-right {
-    width: 800px;
+    width: 50%;
     height: auto;
     background-color: #ffffff;
-    padding: 10px;
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 20px;
 }
 
 .car-name {
-   
+   background-color: #e2e2e2;
+   border-radius: 30px;
+   padding: 2rem;
+   margin: 1rem;
+}
+
+.infos-car {
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+}
+
+.to-talk {
+    background-color: #ff6702;
+    padding: 0.7rem;
+    font-size: 1.1rem;
+    text-align: center;
+    border: solid 1px;
+    border-radius: 8px;
+    width: 15%;
+}
+
+.to-talk a {
+    text-decoration: none;
+    color: white;
 }
 
 .car-name hr {
@@ -89,29 +109,94 @@ body {
 
 .vantagens {
     font-size: 1.1em;
-    background-color: #ffffff;
-    border-radius: 10px;
-    margin-top: 5em;
-    padding: 10px;
-    padding-right: 40px;
+    background-color: #e2e2e2;
+    border-radius: 30px;
+    font-family: "Montserrat", sans-serif;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.vantagens h1 {
+    padding-left: 1rem;
 }
 
 .vantagens li {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
-.car-info img {
-    width: 35px;
+.info img {
+    width: 15%;
+}
+
+.especificacao {
+    border-radius: 20px;
+    background-color: #ffffff;
+    margin: 2rem;
+}
+
+.container-especificacao {
+    display: flex;
 }
 
 .inside-infos {
-    
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 10px;
-    padding-right: 40px;
+    display: flex;
+    gap: 30px;
+    padding: 15px;
 }
 
 .feature {
-    
+    font-size: 1.5rem;
+    font-family: "Inter", sans-serif;
+}
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, orange, white);
+    padding: 10px 60px;
+    width: 100%;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.rodape-topo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.info-rodape {
+    font-size: 1rem;
+}
+
+.horizontal-line {
+    border: none;
+    height: 1px;
+    background-color: white;
+    margin: 20px;
+    width: 90%;
+}
+
+.redes-center {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.redes-center a {
+    text-decoration: none;
+}
+
+.redes img {
+    width: 50px;
+    vertical-align: middle;
+    margin-right: 8px;
 }
