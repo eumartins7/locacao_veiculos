@@ -88,6 +88,35 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+#descricao {
+    font-size: 1.2rem;
+}
+
+.container-infos {
+    font-size: 1.1em;
+    background-color: #e2e2e2;
+    border-radius: 30px;
+    font-family: "Montserrat", sans-serif;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.detalhes-carro {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.detalhes-carro li {
+    list-style: none;
+}
+
+.detalhes-carro img {
+    width: 2%;
+    height: 0.8rem;
+}
+
 .to-talk {
     background-color: #ff6702;
     padding: 0.7rem;

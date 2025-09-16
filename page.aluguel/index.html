@@ -10,7 +10,7 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 
-    <script src="../JavaScript/lista-car.js" defer></script>
+    <script src="../JavaScript/lista.js" defer></script>
     <script src="../JavaScript/detalhes.js" defer></script>
     <script src="../JavaScript/tela-detalhes.js" defer></script>
 </head>
@@ -38,18 +38,35 @@
         <div class="container-right">
             <div class="car-name">
                <div class="infos-car">
-                   <h1>Volkswagen Gol</h1>
-                   <p>1.6 MSI Flex, 4 cilindros</p>
+                   <h1 class="nomeCarro"></h1>
+                   <p id="descricao"></p>
                     <hr>
                     <p>A partir de</p>
-                    <h2>R$2.000,00/mês</h2>
+                    <h2 id="preco"></h2>
                     <div class="to-talk">
                     <a href="https://wa.me/5512988372717" target="_blank">Eu quero</a>
                 </div>
                </div>
             </div>
 
-            <div class="car-info">
+            <div class="container-infos">
+                <h1>Especificações do veículo:</h1>
+                <div class="detalhes-carro">
+                        <p id="forcaCarro"></p>
+                        <img src="/imagens/infos-car/calendario.png" alt="">
+                        <p id="ano"></p>
+                        <img src="../imagens/infos-car/lata-de-spray.png" alt="">
+                        <p id="cor"></p>
+                        <img src="../imagens/infos-car/door.png" alt="">
+                        <p id="portas"></p>
+                        <img src="../imagens/infos-car/gearshift.png" alt="">
+                        <p id="cambio"></p>
+                    <img src="../imagens/infos-car/gas-station.png" alt="">
+                     <p id="combustivel"></p>
+                </div>
+            </div>
+
+            <div class="vantagem-container">
                 <div class="vantagens">
                     <h1>Vantagens de alugar com nós:</h1>
                     <ul>
@@ -59,46 +76,6 @@
                         <li>Atendimento humanizado</li>
                         <li>Alugue por dia, semana ou mês</li>
                     </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="especificacao">
-        <div class="container-especificacao">
-            <div class="info">
-               <div class="inside-infos">
-                   <img src="../imagens/infos-car/speedometer.png" alt="velocimetro"> 
-                   <h2 class="feature">
-                    Zero KM
-                </h2>
-               </div>
-            </div>
-        
-            <div class="info">
-                <div class="inside-infos">
-                    <img src="../imagens/infos-car/gas-station.png" alt="bomba-combustivel">
-                    <h2 class="feature">
-                        Flex
-                    </h2>
-                </div>
-            </div>
-
-            <div class="info">
-                <div class="inside-infos">
-                    <img src="../imagens/infos-car/gearshift.png" alt="bomba-combustivel">
-                    <h2 class="feature">
-                        Manual
-                    </h2>
-                </div>
-            </div>
-
-            <div class="info">
-                <div class="inside-infos">
-                    <img src="../imagens/infos-car/door.png" alt="bomba-combustivel">
-                    <h2 class="feature">
-                        4 Portas
-                    </h2>
                 </div>
             </div>
         </div>
