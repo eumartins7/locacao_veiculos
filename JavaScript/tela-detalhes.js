@@ -42,14 +42,26 @@ nomeCarro.forEach(elemento => {
     elemento.textContent = acharCarro.modelo
 })
 
+// imagemCarro recebeu o elemento img (src) e troquei o caminho que estava o src para o outro caminho que estava guardado no mini banco de dados (caminho da foto)
+let imagemCarro = document.querySelector("#imagemCarro")
+imagemCarro.setAttribute('src', acharCarro.img)
+
 let descricaoCarro = document.querySelector("#descricao")
 descricaoCarro.textContent = acharCarro.descricao
 
-let forcaCarro = document.querySelector("#forcaCarro")
-forcaCarro.textContent = acharCarro.forca
-
 let precoCarro = document.querySelector("#preco")
 precoCarro.textContent = acharCarro.preco
+
+// ====== MENSAGEM PRONTA ======
+let wppCarro = document.querySelector("#wppCarro")
+let mensagem = `Olá! Me interessei pelo ${acharCarro.modelo}. Poderia me passar mais informações?`
+let numero = "5512988372717"
+let urlFinal = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`
+wppCarro.setAttribute("href", urlFinal)
+//=============================
+
+let forcaCarro = document.querySelector("#forcaCarro")
+forcaCarro.textContent = acharCarro.forca
 
 let anoCarro = document.querySelector("#ano")
 anoCarro.textContent = acharCarro.ano
