@@ -103,19 +103,25 @@ body {
 
 .detalhes-carro {
     display: flex;
-    text-align: center;
-    align-items: center;
-    gap: 1rem;
 }
 
 .detalhes-carro li {
     list-style: none;
 }
 
-.detalhes-carro img {
-    width: 2%;
-    height: 0.8rem;
+.inside-detalhes {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
 }
+
+.inside-detalhes img {
+    width: 50%;
+    height: 1.7rem;
+}
+
 
 .to-talk {
     background-color: #ff6702;
