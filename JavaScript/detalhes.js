@@ -12,7 +12,7 @@ let detalhes = [
         portas: "4 portas",
         combustivel: "gasolina",
         forca: "1.0",
-        img: "imagens/cars/uno.jpg"
+        img: "../imagens/cars/uno.jpg"
     },
     {
         id: "gol2018",
@@ -25,7 +25,7 @@ let detalhes = [
         portas: "4 portas",
         combustivel: "flex",
         forca: "1.6 MSI Flex, 4 cilindros",
-        img: "imagens/cars/gol.png"
+        img: "../imagens/cars/gol.png"
     },
     {
         id: "onix2020", 
@@ -38,7 +38,7 @@ let detalhes = [
         portas: "4 portas",
         combustivel: "flex",
         forca: "1.6",
-        img: "imagens/cars/onix.png"
+        img: "../imagens/cars/onix.png"
     },
     {
         id: "hb2017", 
@@ -51,7 +51,7 @@ let detalhes = [
         portas: "4 portas",
         combustivel: "flex",
         forca: "1.6",
-        img: "imagens/cars/hb20.webp"
+        img: "../imagens/cars/hb20.webp"
     },
     {
         id: "kwid2019", 
@@ -64,6 +64,6 @@ let detalhes = [
         portas: "4 portas",
         combustivel: "flex",
         forca: "1.6",
-        img: "imagens/cars/kwid.png"
+        img: "../imagens/cars/kwid.png"
     }
 ]
