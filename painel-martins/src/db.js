@@ -11,14 +11,16 @@ const createTableSQL = `
 CREATE TABLE IF NOT EXISTS clientes (
 id INTEGER PRIMARY KEY AUTOINCREMENT,
 nome TEXT NOT NULL,
-telefone TEXT,
 cpf TEXT,
-carro TEXT
+telefone TEXT,
+carro TEXT,
+tempo_locacao TEXT,
+created_at TEXT DEFAULT (datetime('now'))
 );
 `
 
-//exec executa SQL sem preparar parametros
-db.exec(createTableSQL)
+//executa SQL. Usamos CREATE TABLE IF NOT EXISTS para não quebrar se a tabela já estiver lá.
+db.prepare(createTableSQL).run()
 
 //exporta a instancia do db para ser usada em outros arquivos
 module.exports = db
