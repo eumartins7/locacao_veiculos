@@ -21,23 +21,78 @@ router.get('/', (req,res) => {
 
 //POST /api/clientes -> cria um novo cliente
 router.post('/', (req,res) => {
-    const {nome, telefone, cpf, carro} = req.body
+    const {nome, telefone, cpf, carro, tempo_locacao} = req.body
+
+    console.log('Recebi no body:', req.body)
     
-    //validacao minima - sempre validar no backend
     if(!nome || nome.trim()===''){
         return res.status(400).json({error:'O campo nome é obrigatório'})
     }
 
     try {
-        //usamos placeholders (?) para evitar injeção - passamos os valores depois
-        const insert = db.prepare('INSERT INTO clientes (nome, telefone, cpf, carro) VALUES (?,?,?,?)')
-        const info = stmt.get(info.lastInsertRowid)
+        const insert = db.prepare('INSERT INTO clientes (nome, telefone, cpf, carro, tempo_locacao) VALUES (?,?,?,?,?)')
+        const info = insert.run(nome, telefone, cpf, carro, tempo_locacao)
 
-        //retornamos 201 Created com o objeto inserido
+        const novo = {
+            id: info.lastInsertRowid,
+            nome,
+            telefone,
+            cpf,
+            carro,
+            tempo_locacao
+        }
+
         res.status(201).json(novo)
     } catch (err) {
-        console.err('Erro POST /api/clientes', err)
-        res.status(500).json({error:'Erro ao inserir clientes'})
+        console.error('Erro POST /api/clientes', err)
+        res.status(500).json({error:'Erro ao inserir cliente'})
+    }
+})
+
+// PUT /api/clientes/:id -> atualiza cliente
+router.put('/:id', (req, res) => {
+    const id = Number(req.params.id)
+    const { nome, telefone, cpf, carro, tempo_locacao } = req.body
+
+    try {
+        // Atualiza o cliente
+        const stmt = db.prepare(`
+            UPDATE clientes 
+            SET nome = ?, telefone = ?, cpf = ?, carro = ?, tempo_locacao = ?
+            WHERE id = ?
+        `)
+        const info = stmt.run(nome, telefone, cpf, carro, tempo_locacao, id)
+
+        if (info.changes === 0) {
+            return res.status(404).json({ error: 'Cliente não encontrado' })
+        }
+
+        // Busca o cliente atualizado
+        const clienteAtualizado = db.prepare('SELECT * FROM clientes WHERE id = ?').get(id)
+        res.json(clienteAtualizado)
+
+    } catch (err) {
+        console.error('Erro PUT /api/clientes/:id', err)
+        res.status(500).json({ error: 'Erro ao atualizar cliente' })
+    }
+})
+
+// DELETE /api/clientes/:id -> remove cliente
+router.delete('/:id', (req, res) => {
+    const id = Number(req.params.id)
+
+    try {
+        const stmt = db.prepare('DELETE FROM clientes WHERE id = ?')
+        const info = stmt.run(id)
+
+        if (info.changes === 0) {
+            return res.status(404).json({ error: 'Cliente não encontrado' })
+        }
+
+        res.status(204).send() // sem conteúdo
+    } catch (err) {
+        console.error('Erro DELETE /api/clientes/:id', err)
+        res.status(500).json({ error: 'Erro ao remover cliente' })
     }
 })
 
